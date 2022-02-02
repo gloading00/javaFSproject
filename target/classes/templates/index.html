@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+	<title> MAIN </title>
+	<script src="https://kit.fontawesome.com/c3676c9762.js" crossorigin="anonymous"></script>
+	<link type="text/css" rel="STYLESHEET" href="/indexcss.css" />
+</head>
+
+<body>
+<div class="navbar">
+	
+  <a th:href = "@{/index}" >Home</a>
+  <a th:href = "@{/subscribersTable}" target="blank" >Subscribers</a>
+  <a th:href="@{/subscriptions}" target="blank" >Subscriptions</a>
+  <a style="float:right" sec:authentication="principal.username"></a>
+  <li style="float:right"sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+  
+</div>
+
+
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h1 style="font-size:80px">NBA LEAGUE PASS</h1>
+  <p>Enjoy basketball games in a high quality</p>
+</div>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>WATCH THE GAMES</b></h1>
+	  <img src="images/nba.jpg" width="130" height="71">
+      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Are you a fan?</b></h1>
+      <p><span style="font-size:36px">Feel the action as a pro.</span> <p>
+	  <p>NBA League Pass is giving you access to any game you like!.</p>
+	  <p><span style="font-size:24px"> Stream Live Games, Your Way <p>
+	  <img src="images/live.svg" width="130" height="71">
+      <p>Watch on your smartphone, tablet, PC, or any connected device on the NBA App.<p>
+    </div>
+    <div class="column-33">
+        <img src="images/mobile.jpg" width="635" height="471">
+    </div>
+  </div>
+</div>
+<div class="container" style="background-color:#f1f1f1">
+  <div class="row">
+    <div class="column-33">
+      <img src="images/condensed.jpg" alt="App" width="335" height="471">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>MORE WAYS TO FOLLOW </b></h1>
+      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Access Condensed Replays</b></h1>
+      <p><span style="font-size:24px">Missed a live game?</span> Go with the condensed game replays to catch up the game's highlights.Soon available with any League Pass subscription</p>
+      <img src="images/timer.svg" width="130" height="71">
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+        <div class="left box">
+          <h2>About us</h2>
+          <div class="content">
+            <p>Available now on every social media platform.Find us now and let's share moments about our basketball world together!</p>
+            <div class="social">
+              <a href="https://www.facebook.com/NBA-League-PASS-1556578821252238/"><span class="fab fa-facebook-f"></span></a>
+              <a href="#"><span class="fab fa-twitter"></span></a>
+              <a href="https://www.instagram.com/nba/"><span class="fab fa-instagram"></span></a>
+              <a href="https://www.youtube.com/user/NBA"><span class="fab fa-youtube"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="center box">
+          <h2>Address</h2>
+          <div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">645 5th Ave,New York</span>
+            </div>
+            <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+1 212-407-8000</span>
+            </div>
+            <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">leaguepass@nba.com</span>
+            </div>
+          </div>
+        </div>
+	 </body>
+</html>
